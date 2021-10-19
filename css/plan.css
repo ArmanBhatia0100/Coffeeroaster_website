@@ -309,7 +309,10 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 400px 1080px auto 340px auto;
-  grid-template-areas: "head" "process" "choose" "summary";
+  grid-template-areas: "head"
+ "process"
+ "choose"
+ "summary";
   margin-top: 24px;
   width: 100%;
   row-gap: 20px;
@@ -544,7 +547,7 @@ main {
   .head {
     align-items: flex-start;
     padding-left: 75px;
-    background-image: url(/starter-code/assets/plan/tablet/image-hero-blackcup.jpg);
+    background-image: url(../assets/plan/tablet/image-hero-blackcup.jpg);
   }
   .head h1 {
     text-align: left;
@@ -623,7 +626,7 @@ main {
     grid-template-rows: 550px 650px auto 350px;
   }
   .head {
-    background-image: url(/starter-code/assets/plan/desktop/image-hero-blackcup.jpg);
+    background-image: url(../assets/plan/desktop/image-hero-blackcup.jpg);
     margin-bottom: 50px;
   }
   .head p {
