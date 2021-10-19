@@ -297,7 +297,7 @@ main {
 .quality {
   margin-top: 75px;
   grid-area: quality;
-  background: url("/starter-code/assets/about/mobile/bg-quality.png");
+  background: url(../assets/about/mobile/bg-quality.png);
   border-radius: 8px;
 }
 
@@ -403,7 +403,7 @@ footer {
   }
   .banner {
     text-align: left;
-    background: url("/starter-code/assets/about/tablet/image-hero-whitecup.jpg");
+    background: url(../assets/about/tablet/image-hero-whitecup.jpg);
     background-size: cover;
     padding-top: 70px;
   }
@@ -514,7 +514,7 @@ footer {
     padding-top: 45px;
   }
   .banner {
-    background: url("/starter-code/assets/about/desktop/image-hero-whitecup.jpg");
+    background: url(../assets/about/desktop/image-hero-whitecup.jpg);
     background-size: cover;
     height: 450px;
     padding: 60px 0;
