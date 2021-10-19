@@ -56,7 +56,7 @@ main {
 }
 .banner {
   grid-area: banner;
-  background: url("/starter-code/assets/about/mobile/image-hero-whitecup.jpg");
+  background: url("../assets/about/mobile/image-hero-whitecup.jpg");
   background-size: cover;
   text-align: center;
   padding: 25px 25px;
@@ -103,7 +103,7 @@ main {
 .quality {
   margin-top: 75px;
   grid-area: quality;
-  background: url("/starter-code/assets/about/mobile/bg-quality.png");
+  background: url("../assets/about/mobile/bg-quality.png");
   border-radius: 8px;
 
   img {
