@@ -1,0 +1,690 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+.hidden {
+  display: none;
+}
+
+header .nav {
+  width: 100%;
+}
+
+.brand_icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand_icon #hamMenue {
+  margin-top: 6px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.dropdown_container {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.dropdown_container ul {
+  list-style: none;
+  padding: 10px 30px;
+}
+
+.dropdown_container ul li {
+  margin: 10px 0px;
+  border-bottom: 1px solid #2c343e;
+}
+
+.dropdown_container ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #2c343e;
+}
+
+.dropdown_container ul li a:hover {
+  color: #8f5c2d;
+}
+
+@media screen and (min-width: 450px) {
+  header {
+    margin: 0 auto;
+  }
+  header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .navbar #hamMenue {
+    display: none;
+  }
+  header .navbar ul {
+    display: flex;
+    text-decoration: none;
+    width: 583px;
+    justify-content: space-evenly;
+  }
+  header .navbar ul li {
+    list-style: none;
+    font-size: 16px;
+    border: none;
+  }
+  header .navbar ul li:hover {
+    color: #333d4b;
+  }
+  header .navbar ul li a {
+    text-decoration: none;
+    letter-spacing: 0.923077px;
+    text-transform: uppercase;
+    color: #83888f;
+  }
+  header .navbar ul li a:hover {
+    color: #8f5c2d;
+  }
+  header .navbar .dropdown_container {
+    display: block;
+    margin-top: 0px;
+    background-color: inherit;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  header {
+    max-width: 100%;
+  }
+}
+
+footer {
+  background: #2c343e;
+  text-align: center;
+}
+
+footer div {
+  padding: 28px 0 0 0;
+}
+
+footer div a {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 25px;
+  color: #83888f;
+  display: block;
+  text-decoration: none;
+  letter-spacing: 0.923077px;
+  text-transform: uppercase;
+}
+
+footer div a:hover {
+  color: #b1b1b1;
+}
+
+footer .social__links {
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .social__links img {
+  margin: 0 10px;
+}
+
+footer .social__links a {
+  width: 44px;
+  height: 44px;
+}
+
+footer .social__links a:hover {
+  color: #b1b1b1;
+}
+
+@media screen and (min-width: 450px) {
+  footer div {
+    width: 483px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer div a {
+    width: 220px;
+  }
+  footer div a:hover {
+    color: #b1b1b1;
+  }
+  footer .social__links {
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+  }
+  footer > div {
+    padding: 0;
+    align-items: center;
+  }
+  footer .social__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 26px;
+  }
+  footer .social__links a {
+    width: 44px;
+  }
+  footer .social__links a img {
+    padding: 10px 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fefcf7;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  padding: 0px 7px;
+  padding-top: 20px;
+}
+
+main {
+  text-align: center;
+  margin-top: 20px;
+}
+
+main .banner {
+  background-image: url(../assets/home/mobile/image-hero-coffeepress.jpg);
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  padding-top: 50px;
+}
+
+main .banner h1 {
+  font-size: 40px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #fefcf7;
+}
+
+main .banner p {
+  padding: 0 24px 39px 24px;
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fefcf7;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+main .banner button {
+  width: 217px;
+  height: 59px;
+  background: #0e8784;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #fefcf7;
+}
+
+main .banner button:hover {
+  background: #66d2cf;
+}
+
+main .collections h1 {
+  font-size: 40px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #83888f;
+}
+
+main .collections .collection__item img {
+  width: 100%;
+  max-width: 200px;
+}
+
+main .collections .collection__item h2 {
+  font-size: 24px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #333d4b;
+}
+
+main .collections .collection__item p {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #333d4b;
+}
+
+main .inner__dark_section {
+  height: 902px;
+  border-radius: 10px;
+  background: #2c343e;
+  border-radius: 10px;
+}
+
+main .inner__dark_section h2 {
+  font-size: 28px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #fefcf7;
+  padding: 64px 0 24px 0;
+  margin: 0;
+}
+
+main .inner__dark_section p {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fefcf7;
+  margin: 0 auto;
+  opacity: 0.8;
+  width: 279px;
+}
+
+main .cards__container {
+  margin-top: -660px;
+  padding: 58px 0 0 0;
+}
+
+main .cards__container .card {
+  width: 279px;
+  height: 382px;
+  background: #0e8784;
+  border-radius: 8px;
+  margin: auto;
+  padding: 51px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 51px 12px;
+}
+
+main .cards__container .card h2 {
+  font-size: 24px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #fefcf7;
+}
+
+main .cards__container .card p {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fefcf7;
+  font-weight: 400;
+}
+
+main .process {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+main .process > h2 {
+  font-size: 24px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #83888f;
+  margin-bottom: 80px;
+}
+
+main .process article {
+  height: 252px;
+  margin-bottom: 52px;
+}
+
+main .process article h1 {
+  font-size: 72px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #fdd6ba;
+  margin: 0 0 24px 0;
+}
+
+main .process article h2 {
+  font-size: 28px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #333d4b;
+}
+
+main .process article p {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #333d4b;
+}
+
+main .process button {
+  width: 217px;
+  height: 59px;
+  background: #0e8784;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #fefcf7;
+  font-size: 18px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #fefcf7;
+}
+
+main .process button:hover {
+  background: #66d2cf;
+}
+
+@media screen and (min-width: 450px) {
+  .wrapper {
+    margin: auto;
+    row-gap: 120px;
+    padding: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  main {
+    text-align: left;
+  }
+  main .banner {
+    background: url(../assets/home/tablet/image-hero-coffeepress.jpg);
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    background-size: cover;
+    padding: 50px 25px;
+  }
+  main .banner h1 {
+    max-width: 329px;
+  }
+  main .banner p {
+    width: 389px;
+    margin: 0;
+    padding: 0;
+    margin: 20px 0;
+  }
+  main .banner button {
+    width: 217px;
+  }
+  main .collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 689px;
+    margin: 0 auto;
+  }
+  main .collections h1 {
+    font-size: 96px;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    color: #83888f;
+    text-align: center;
+  }
+  main .collections .collection__item {
+    display: flex;
+    margin-bottom: 32px;
+  }
+  main .collections .collection__item div {
+    width: 282px;
+  }
+  main .features {
+    margin: auto;
+    text-align: center;
+  }
+  main .features div .inner__dark_section {
+    height: 573px;
+  }
+  main .features div .inner__dark_section p {
+    width: 540px;
+  }
+  main .features div .cards__container {
+    margin-top: -370px;
+  }
+  main .features div .cards__container .card {
+    display: flex;
+    flex-direction: row;
+    width: 573px;
+    height: 180px;
+    text-align: left;
+  }
+  main .features div .cards__container .card img {
+    margin-right: 55px;
+  }
+  main .features div .cards__container .card div {
+    width: 344px;
+  }
+  main .process {
+    margin: 120px auto;
+  }
+  main .process div {
+    display: flex;
+  }
+  main .process div article {
+    width: 223px;
+    height: 371px;
+    padding: 20px;
+  }
+  main .process div article h1 {
+    font-size: 72px;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    color: #fdd6ba;
+    margin: 0 0 24px 0;
+  }
+  main .process div article h2 {
+    font-size: 28px;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    color: #333d4b;
+  }
+  main .process div article p {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: #333d4b;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    padding: 0 25px;
+  }
+  main {
+    text-align: left;
+  }
+  main .banner {
+    background: url("../assets/home/desktop/image-hero-coffeepress.jpg");
+    width: 100%;
+    max-width: 1440px;
+    background-size: cover;
+  }
+  main .banner h1 {
+    font-size: 72px;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    color: #fefcf7;
+    width: 600px;
+    line-height: 80px;
+    max-width: 600px;
+    margin-bottom: 32px;
+  }
+  main .banner p {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #fefcf7;
+  }
+  main .banner button {
+    width: 217px;
+    height: 59px;
+    background: #0e8784;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    color: #fefcf7;
+  }
+  main .banner button:hover {
+    background: #66d2cf;
+  }
+  main .collections {
+    align-items: center;
+  }
+  main .collections div {
+    display: flex;
+  }
+  main .collections div .collection__item {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .collections div .collection__item div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  main .features {
+    width: 1280px;
+  }
+  main .features div .inner__dark_section {
+    width: 1280px;
+    height: 477px;
+  }
+  main .features div .inner__dark_section h2 {
+    font-size: 54px;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    color: #fefcf7;
+  }
+  main .features div .inner__dark_section p {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fefcf7;
+  }
+  main .features div .cards__container {
+    margin-top: -300px;
+    display: flex;
+  }
+  main .features div .cards__container .card {
+    width: 350px;
+    height: 382px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  main .features div .cards__container .card img {
+    margin: 0;
+  }
+  main .features div .cards__container .card p {
+    width: 200px;
+    margin: auto;
+  }
+  main .process {
+    width: 1280px;
+    margin: 0 auto;
+  }
+  main .process button {
+    margin: 0 0 54px 110px;
+  }
+  main .process div {
+    justify-content: space-evenly;
+  }
+  main .process div article {
+    width: 300px;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,87 @@
+@mixin cardsPara($fontSize, $color: #fefcf7) {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $fontSize;
+  line-height: 25px;
+  color: $color;
+}
+footer {
+  background: #2c343e;
+  text-align: center;
+  div {
+    padding: 28px 0 0 0;
+    a {
+      @include cardsPara(12px, #83888f);
+      display: block;
+      text-decoration: none;
+      letter-spacing: 0.923077px;
+      text-transform: uppercase;
+      &:hover {
+        color: #b1b1b1;
+      }
+    }
+  }
+  .social__links {
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      margin: 0 10px;
+    }
+    a {
+      width: 44px;
+      height: 44px;
+      &:hover {
+        color: #b1b1b1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 450px) {
+  footer {
+    div {
+      width: 483px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      a {
+        width: 220px;
+        &:hover {
+          color: #b1b1b1;
+        }
+      }
+    }
+    .social__links {
+      justify-content: center;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    & > div {
+      padding: 0;
+      align-items: center;
+    }
+    .social__links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-top: 26px;
+      a {
+        width: 44px;
+        img {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}

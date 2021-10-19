@@ -1,0 +1,347 @@
+@import "_header";
+@import "_footer";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+
+$font-lg: 32px;
+$font-md: 16px;
+$font-sm: 15px;
+
+$text-white: #fefcf7;
+$text-grey: #333d4b;
+
+@mixin Title($size, $color) {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: $size;
+  line-height: 40px;
+  color: $color;
+}
+@mixin Para($size, $color) {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: normal;
+  font-size: $size;
+  line-height: 25px;
+  color: $color;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+// Mobile Device...
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fefcf7;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px 10px;
+}
+.wrapper {
+  padding: 0px 7px;
+  padding-top: 20px;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: "banner" "commitment" "quality" "location" "footer";
+  row-gap: 20px;
+  margin-top: 24px;
+}
+.banner {
+  grid-area: banner;
+  background: url("/starter-code/assets/about/mobile/image-hero-whitecup.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 25px 25px;
+  border-radius: 10px;
+  height: 400px;
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-around;
+    h1 {
+      @include Title(32px, $text-white);
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    p {
+      @include Para(16px, $text-white);
+    }
+  }
+}
+.commitment {
+  grid-area: commitment;
+  article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 10px;
+    }
+    .commitment__text {
+      h1 {
+        @include Title(32px, $text-grey);
+      }
+      p {
+        @include Para(15px, $text-grey);
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.quality {
+  margin-top: 75px;
+  grid-area: quality;
+  background: url("/starter-code/assets/about/mobile/bg-quality.png");
+  border-radius: 8px;
+
+  img {
+    width: 279px;
+    height: 156px;
+    border-radius: 8px;
+    position: relative;
+    top: -75px;
+    left: 54px;
+  }
+  .quality__text {
+    position: relative;
+    top: -50px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    h1 {
+      @include Title(35px, $text-white);
+      margin: 0;
+    }
+    p {
+      @include Para(15px, $text-white);
+    }
+  }
+}
+.locations {
+  grid-area: location;
+  h1 {
+    text-align: center;
+    @include Title(24px, #83888f);
+  }
+  .location {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    img {
+      width: 40.84px;
+      height: 49px;
+      margin: 50px auto 0 auto;
+    }
+    h1 {
+      @include Title(36px, $text-grey);
+    }
+    p {
+      @include Para(16px, $text-grey);
+    }
+  }
+}
+footer {
+  grid-area: footer;
+}
+
+// tablet Devices
+
+@media screen and (min-width: 450px) {
+  .wrapper {
+    margin: auto;
+    row-gap: 120px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  main {
+    grid-template-rows: 400px auto auto auto auto;
+  }
+  .banner {
+    text-align: left;
+    background: url("/starter-code/assets/about/tablet/image-hero-whitecup.jpg");
+    background-size: cover;
+    padding-top: 70px;
+    article {
+      align-items: flex-start;
+      width: 398px;
+      h1 {
+        text-align: left;
+        @include Title(35px, $text-white);
+      }
+      p {
+        @include Para(18px, $text-white);
+        line-height: 33px;
+      }
+    }
+  }
+  .commitment {
+    height: 570px;
+    margin: 30px 0;
+    margin-bottom: 200px;
+    article {
+      display: flex;
+      flex-direction: row;
+      img {
+        width: 550px;
+        height: 720px;
+      }
+      div {
+        text-align: left;
+        margin: 0 10px;
+        padding: 0 24px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .quality {
+    img {
+      width: 573px;
+      height: 320px;
+      left: 98px;
+    }
+    .quality__text {
+      align-items: center;
+      width: 540px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+  }
+  .locations {
+    margin-bottom: 50px;
+    h1 {
+      text-align: left;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      .location {
+        align-items: flex-start;
+        padding: 0px;
+        justify-content: space-evenly;
+        width: 223px;
+        text-align: left;
+        img {
+          margin-left: 0;
+        }
+        h1 {
+          @include Title(24px, $text-grey);
+        }
+        p {
+          @include Para(16px, $text-grey);
+          width: 153px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+// Desktop Devices
+
+@media screen and (min-width: 850px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    padding: 0 25px;
+    padding-top: 45px;
+  }
+  .banner {
+    background: url("/starter-code/assets/about/desktop/image-hero-whitecup.jpg");
+    background-size: cover;
+    height: 450px;
+    padding: 60px 0;
+    article {
+      margin-left: 48px;
+      width: 445px;
+      text-align: left;
+      h1 {
+        @include Title(40px, $text-white);
+      }
+      p {
+        @include Para(20px, $text-white);
+        line-height: 36px;
+        font-weight: 500;
+      }
+    }
+  }
+  .commitment {
+    height: 570px;
+    margin: 84px auto;
+    margin-bottom: 0;
+    article {
+      justify-content: space-between;
+      img {
+        max-width: 600px;
+        max-height: 500px;
+      }
+    }
+    .commitment__text {
+      display: flex;
+      justify-content: center;
+      h1 {
+        @include Title(40px, $text-grey);
+      }
+      p {
+        @include Para(18px, $text-grey);
+      }
+    }
+  }
+  .quality {
+    display: flex;
+    padding: 50px 0;
+    height: 474px;
+    img {
+      width: 445px;
+      max-width: 445px;
+      height: 475px;
+      position: relative;
+      top: -150px;
+      left: 54px;
+      order: 2;
+    }
+    .quality__text {
+      margin: 100px 50px;
+      order: 1;
+      text-align: left;
+      h1 {
+        @include Title(40, $text-white);
+        margin-bottom: 40px;
+      }
+      p {
+        @include Para(19px, $text-white);
+        line-height: 30px;
+      }
+    }
+  }
+  .locations {
+    div {
+      justify-content: space-around;
+      .location {
+        align-items: left;
+        h1 {
+          margin-left: 0;
+        }
+      }
+    }
+    h1 {
+      margin-left: 100px;
+    }
+  }
+}

@@ -1,0 +1,455 @@
+@import "_footer";
+@import "header";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+
+.hidden {
+  display: none !important;
+}
+.active {
+  background-color: #0e8784 !important;
+}
+$color-white: #fefcf7;
+@mixin title($size, $color) {
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: $size;
+  color: $color;
+}
+@mixin para($size, $color) {
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  text-align: center;
+  color: $color;
+}
+@mixin button {
+  width: 217px;
+  height: 59px;
+  background: #0e8784;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  @include title(18px, #fff);
+  &:hover {
+    background: #66d2cf;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fefcf7;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px 10px;
+}
+.wrapper {
+  padding: 0 7px;
+  // padding-top: 20px;
+}
+.modal_blur_background {
+  box-sizing: border-box;
+  display: block;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.584);
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  .modal {
+    position: fixed;
+    left: 10%;
+    top: 5%;
+    width: 80vw;
+    opacity: 99;
+    background: #fefcf7;
+    border-radius: 8px;
+    z-index: 10;
+
+    #title {
+      background: #333d4b;
+      border-radius: 4px 4px 0px 0px;
+      width: 100%;
+      h1 {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 10px;
+        color: #fff;
+      }
+    }
+    div {
+      padding: 10px;
+    }
+    .summary_modal_container {
+      h3 {
+        font-family: Fraunces;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 40px;
+        /* or 167% */
+
+        color: #83888f;
+      }
+      p {
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #333d4b;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+      }
+      #checkout {
+        @include button();
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 400px 1080px auto 340px auto;
+  grid-template-areas:
+    "head"
+    "process"
+    "choose"
+    "summary";
+  margin-top: 24px;
+  width: 100%;
+  row-gap: 20px;
+}
+.head {
+  grid-area: head;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../assets/plan/mobile/image-hero-blackcup.jpg);
+  background-size: cover;
+  text-align: center;
+  border-radius: 10px;
+
+  h1 {
+    @include title(40px, $color-white);
+    font-weight: 700;
+    margin: 0 auto;
+  }
+  p {
+    @include para(15px, $color-white);
+    line-height: 25px;
+    opacity: 0.8;
+    width: 70%;
+    margin: 20px auto;
+  }
+}
+.process {
+  grid-area: process;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #2c343e;
+  border-radius: 10px;
+  article {
+    display: flex;
+    padding: 0 5px;
+    margin: 15px auto;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      @include title(64px, #fdd6ba);
+      padding: 0;
+      margin: 0;
+    }
+    h3 {
+      @include title(28px, $color-white);
+      margin: 0;
+    }
+    p {
+      @include para(15px, #ffffff);
+      line-height: 30px;
+    }
+  }
+}
+.choose {
+  grid-area: choose;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ._hidden_cat {
+    display: none;
+  }
+  .categories {
+    display: none;
+  }
+  article {
+    width: 100%;
+    .question_text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        @include title(24px, #83888f);
+        width: 70%;
+      }
+      &:hover * {
+        cursor: pointer;
+        color: #0e8784;
+      }
+    }
+    .panel {
+      display: flex;
+      flex-direction: column;
+      div {
+        background: #f4f1eb;
+        border-radius: 8px;
+        padding: 10px;
+        padding-left: 28px;
+        margin-bottom: 20px;
+        &:hover {
+          background-color: #0e8784;
+          p,
+          h1 {
+            color: #fff;
+          }
+        }
+        h1 {
+          @include title(24px, #333d4b);
+        }
+        p {
+          @include para(15px, #333d4b);
+          text-align: left;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+.summary {
+  grid-area: summary;
+  background-color: #131c27;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 24px 24px;
+  p {
+    text-align: left;
+    display: inline-block;
+    @include para(16px, $color-white);
+  }
+  h3 {
+    font-family: Fraunces 9pt;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 40px;
+    color: #ffffff;
+  }
+}
+#plan_section_btn {
+  @include button();
+  margin: auto;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 450px) {
+  .modal_blur_background {
+    z-index: 9;
+    .modal {
+      width: 50vw;
+      top: 8%;
+      left: 25%;
+      z-index: 10;
+    }
+  }
+  .wrapper {
+    margin: auto;
+    row-gap: 120px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  main {
+    grid-template-rows: 400px 500px auto 340px;
+  }
+  .head {
+    align-items: flex-start;
+    padding-left: 75px;
+    background-image: url(/starter-code/assets/plan/tablet/image-hero-blackcup.jpg);
+    h1 {
+      text-align: left;
+      margin: 0;
+    }
+    p {
+      width: 60%;
+      margin-top: 25px;
+      text-align: left;
+      z-index: 0;
+    }
+  }
+  .process {
+    flex-direction: row;
+    justify-content: left;
+    padding: 25px 15px 5px 15px;
+    article {
+      text-align: left;
+      margin: 10px 5px;
+      align-items: flex-start;
+      h3 {
+        width: 200px;
+        height: 70px;
+      }
+      p {
+        text-align: left;
+        height: 180px;
+      }
+    }
+  }
+  .choose {
+    article {
+      margin: 20px 0;
+      .question_text {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        p {
+          font-size: 32px;
+        }
+      }
+      .panel {
+        flex-direction: row;
+        height: 250px;
+        max-height: 280px;
+        cursor: pointer;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          max-width: 240px;
+          min-width: 185px;
+          margin: 0 10px;
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.253);
+          p {
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+  .summary {
+    p {
+      font-size: 26px;
+      opacity: 0.5;
+    }
+    h3 {
+      font-size: 26px;
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    padding: 0 45px;
+    // padding-top: 45px;
+  }
+  .main {
+    grid-template-rows: 550px 650px auto 350px;
+  }
+  .head {
+    background-image: url(/starter-code/assets/plan/desktop/image-hero-blackcup.jpg);
+    margin-bottom: 50px;
+    p {
+      width: 30%;
+    }
+  }
+  .process {
+    justify-content: space-around;
+    article {
+      margin: 10px 25px;
+      h3 {
+        margin: 15px 0px;
+      }
+      p {
+        width: 70%;
+      }
+    }
+  }
+  .choose {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "categories questions_container";
+    align-items: flex-start;
+    padding: 0 165px;
+    .categories {
+      grid-area: categories;
+      display: flex;
+      flex-direction: column;
+      justify-items: flex-start;
+      padding-top: 48px;
+      width: 80%;
+      a {
+        text-decoration: none;
+        .cat {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          margin-bottom: 10px;
+          border-bottom: 1px solid grey;
+          &:hover * {
+            cursor: pointer;
+            color: #0e8784;
+          }
+          h2 {
+            width: 50%;
+            @include title(24px, #333d4b79);
+            text-align: right;
+            padding-right: 20px;
+          }
+          p {
+            width: 50%;
+            @include title(24px, #333d4b79);
+            text-align: left;
+            padding-left: 10px;
+          }
+        }
+        .cat:last-child {
+          border: none;
+        }
+      }
+    }
+    .questions_container {
+      grid-area: questions_container;
+      margin-left: 75px;
+    }
+  }
+  .summary {
+    width: 100%;
+    max-width: 685px;
+    margin: 0 42.5%;
+  }
+  #plan_section_btn {
+    position: relative;
+    right: -31%;
+    margin-bottom: 50px;
+  }
+}

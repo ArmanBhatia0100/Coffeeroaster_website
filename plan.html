@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7dfbd567ec.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/plan.css">
+  <title>Coffeeroasters</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="modal_blur_background hidden">
+      <div class="modal">
+        <div id="title">
+          <h1>Order Summary</h1>
+        </div>
+        <div class="summary_modal_container">
+          <h3>“I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+            sent to me _____.”</h3>
+          <p>Is this correct? You can proceed to checkout or go back to plan selection if something
+            is off. Subscription discount codes can also be redeemed at the checkout.
+          </p>
+          <button id="checkout" type="button">Checkout $_____/month</button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav class="navbar">
+        <div class="brand_icon">
+          <img id="logo" src="./assets/shared/desktop/logo.svg" alt="logo">
+          <img id="hamMenue" src="./assets/shared/mobile/icon-hamburger.svg" alt="Ham_menue">
+        </div>
+        <div class="dropdown_container">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./plan.html">Create your plan</a></li>
+          </ul>
+        </div>
+
+      </nav>
+    </header>
+
+    <main>
+      <section class="head">
+        <h1>Create a plan</h1>
+        <p> Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from
+          around the globe delivered fresh to your door.</p>
+      </section>
+      <section class="process">
+        <article>
+          <h2>01</h2>
+          <h3>Pick your coffee</h3>
+          <p>Select from our evolving range of artisan coffees. Our beans are ethically
+            sourced and we pay fair prices for them. There's new coffees in all profiles
+            every month for you to try out.</p>
+        </article>
+        <article>
+          <h2>02</h2>
+          <h3>Choose the frequency</h3>
+          <p>Customize your order frequency, quantity, even your roast style and grind type.
+            Pause, skip or cancel your subscription with no commitment through our online portal.</p>
+        </article>
+        <article>
+          <h2>03</h2>
+          <h3>Receive and enjoy!</h3>
+          <p>
+            We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class
+            coffees
+            curated to provide a distinct tasting experience.</p>
+        </article>
+      </section>
+      <section class="choose">
+        <div class="categories ">
+          <a href="#q1">
+            <div class="cat">
+              <h2>01</h2>
+              <p>Preferences</p>
+            </div>
+          </a>
+          <a href="#q2">
+            <div class="cat">
+              <h2>02</h2>
+              <p>Bean type</p>
+            </div>
+          </a>
+          <a href="#q3">
+            <div class="cat">
+              <h2>03</h2>
+              <p>Quantity</p>
+            </div>
+          </a>
+          <a href="#q4">
+            <div class="cat">
+              <h2>04</h2>
+              <p>Grind option</p>
+            </div>
+          </a>
+          <a href="#q5">
+            <div class="cat">
+              <h2>05</h2>
+              <p>Deliveries</p>
+            </div>
+          </a>
+
+        </div>
+        <div class="questions_container">
+          <article>
+            <div id="q1" class="question_text">
+              <p>How do you drink your coffee?</p> <span><i class="fas fa-chevron-down fa-xs"></i></span>
+            </div>
+            <div class="panel panel1">
+              <div>
+                <h1>Capsule</h1>
+                <p>Compatible with Nespresso systems and similar brewers</p>
+              </div>
+              <div>
+                <h1>Filter</h1>
+                <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
+              </div>
+              <div>
+                <h1>Espresso</h1>
+                <p>Dense and finely ground beans for an intense, flavorful experience</p>
+              </div>
+
+            </div>
+          </article>
+          <article>
+            <div id="q2" class="question_text">
+              <p>What type of coffee?</p>
+              <i class="fas fa-chevron-down fa-xs"></i>
+            </div>
+            <div class="panel panel2">
+              <div>
+                <h1>Single origin</h1>
+                <p>Distinct, high quality coffee from a specific family-owned farm</p>
+              </div>
+              <div>
+                <h1>Decaf</h1>
+                <p>Just like regular coffee, except the caffeine has been removed</p>
+              </div>
+              <div>
+                <h1>Blended</h1>
+                <p>Combination of two or three dark roasted beans of organic coffees</p>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div id="q3" class="question_text">
+              <p>How much would you like?</p>
+              <i class="fas fa-chevron-down fa-xs"></i>
+            </div>
+            <div class="panel panel3">
+              <div>
+                <h1>250g</h1>
+                <p>Perfect for the solo drinker. Yields about 12 delicious cups.
+                </p>
+              </div>
+              <div>
+                <h1>500g</h1>
+                <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+              </div>
+              <div>
+                <h1>1000g</h1>
+                <p>Perfect for offices and events. Yields about 90 delightful cups.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div id="q4" class="question_text">
+              <p>Want us to grind them?</p>
+              <i class="fas fa-chevron-down fa-xs"></i>
+            </div>
+            <div class="panel panel4">
+              <div>
+                <h1>Wholebean</h1>
+                <p>Best choice if you cherish the full sensory experience</p>
+              </div>
+              <div>
+                <h1>Filter</h1>
+                <p>For drip or pour-over coffee methods such as V60 or Aeropress
+                </p>
+              </div>
+              <div>
+                <h1>Cafetiére</h1>
+                <p>Course ground beans specially suited for french press coffee</p>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div id="q5" class="question_text">
+              <p>How often should we deliver?</p>
+              <i class="fas fa-chevron-down fa-xs"></i>
+            </div>
+            <div class="panel panel5">
+              <div>
+                <h1>Every week</h1>
+                <p>$14.00 per shipment. Includes free first-class shipping.
+                </p>
+              </div>
+              <div>
+                <h1>Every 2 weeks</h1>
+                <p>$17.25 per shipment. Includes free priority shipping.
+                </p>
+              </div>
+              <div>
+                <h1>Every month</h1>
+                <p>$22.50 per shipment. Includes free priority shipping.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </section>
+      <section class="summary">
+        <p>Order Summary</p>
+        <h3 class="summary_text">
+          “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+          sent to me _____.”
+        </h3>
+      </section>
+      <button id="plan_section_btn">Create my plan!</button>
+    </main>
+    <footer>
+      <div>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About us</a>
+        <a href="#">Create your plan</a>
+      </div>
+      <div class="social__links">
+        <a href="">
+          <img src="./assets/shared/desktop/icon-facebook.svg" alt="">
+        </a>
+        <a href="">
+          <img src="./assets/shared/desktop/icon-instagram.svg" alt="">
+        </a>
+        <a href="">
+          <img src="./assets/shared/desktop/icon-twitter.svg" alt="">
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./js/index.js" type="module"> </script>
+</body>
+
+</html>

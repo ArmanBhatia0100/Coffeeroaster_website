@@ -1,0 +1,379 @@
+@import "_header";
+@import "_footer";
+$mobile-device-size: 375px;
+$primary--color: #fefcf7;
+$secondary--color: #0e8784;
+$other--color: #2c343e;
+$font--lg: 2rem;
+$font--med: 1.5rem;
+$font-sm: 0.9rem;
+
+// Mixins
+
+@mixin title($fontSize, $color: #fefcf7) {
+  font-size: $fontSize;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: $color;
+}
+@mixin cardsPara($fontSize, $color: #fefcf7) {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $fontSize;
+  line-height: 25px;
+  color: $color;
+}
+@mixin card($width: auto, $height: auto, $margin: auto, $bgColor: #0e8784) {
+  width: $width;
+  height: $height;
+  background: $bgColor;
+  border-radius: 8px;
+  margin: $margin;
+  padding: 51px 12px;
+}
+@mixin button {
+  width: 217px;
+  height: 59px;
+  background: #0e8784;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  @include title(18px);
+  &:hover {
+    background: #66d2cf;
+  }
+}
+
+// --------------------------- Mobile device Size -----------------------
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #fefcf7;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px 10px;
+}
+.hidden {
+  display: none;
+}
+.wrapper {
+  // margin: 23px auto 0 auto;
+  padding: 0px 7px;
+  padding-top: 20px;
+}
+main {
+  text-align: center;
+  margin-top: 20px;
+  .banner {
+    background-image: url(../assets/home/mobile/image-hero-coffeepress.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    padding-top: 50px;
+
+    h1 {
+      @include title(40px);
+    }
+    p {
+      padding: 0 24px 39px 24px;
+      @include cardsPara(15px);
+      mix-blend-mode: normal;
+      opacity: 0.8;
+    }
+    button {
+      @include button;
+    }
+  }
+  .collections {
+    h1 {
+      @include title(40px, #83888f);
+    }
+    .collection__item {
+      img {
+        width: 100%;
+        max-width: 200px;
+      }
+      h2 {
+        @include title(24px, #333d4b);
+      }
+      p {
+        @include cardsPara(15px, #333d4b);
+      }
+    }
+  }
+  .inner__dark_section {
+    height: 902px;
+    border-radius: 10px;
+    background: $other--color;
+    border-radius: 10px;
+
+    h2 {
+      @include title(28px);
+      padding: 64px 0 24px 0;
+      margin: 0;
+    }
+    p {
+      @include cardsPara(15px, #fefcf7);
+      margin: 0 auto;
+      opacity: 0.8;
+      width: 279px;
+    }
+  }
+  .cards__container {
+    margin-top: -660px;
+    padding: 58px 0 0 0;
+    .card {
+      @include card(279px, 382px, auto);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      padding: 51px 12px;
+
+      h2 {
+        @include title(24px);
+      }
+      p {
+        @include cardsPara(15px, #fefcf7);
+        font-weight: 400;
+      }
+    }
+  }
+  .process {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    & > h2 {
+      @include title(24px, #83888f);
+      margin-bottom: 80px;
+    }
+    article {
+      height: 252px;
+      margin-bottom: 52px;
+      h1 {
+        @include title(72px, #fdd6ba);
+        margin: 0 0 24px 0;
+      }
+      h2 {
+        @include title(28px, #333d4b);
+      }
+      p {
+        @include cardsPara(15px, #333d4b);
+      }
+    }
+    button {
+      @include button;
+      @include title(18px);
+    }
+  }
+}
+
+//--------------------------------------- Tablet devices-----------------------
+
+@media screen and (min-width: 450px) {
+  .wrapper {
+    margin: auto;
+    row-gap: 120px;
+    padding: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  main {
+    text-align: left;
+    .banner {
+      background: url(../assets/home/tablet/image-hero-coffeepress.jpg);
+      width: 100%;
+      max-width: 850px;
+      margin: auto;
+      background-size: cover;
+      padding: 50px 25px;
+      h1 {
+        max-width: 329px;
+      }
+      p {
+        width: 389px;
+        margin: 0;
+        padding: 0;
+        margin: 20px 0;
+      }
+      button {
+        width: 217px;
+      }
+    }
+    .collections {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 689px;
+      margin: 0 auto;
+      h1 {
+        @include title(96px, #83888f);
+        text-align: center;
+      }
+      .collection__item {
+        display: flex;
+        margin-bottom: 32px;
+        div {
+          width: 282px;
+        }
+      }
+    }
+    .features {
+      margin: auto;
+      text-align: center;
+      div {
+        .inner__dark_section {
+          height: 573px;
+          p {
+            width: 540px;
+          }
+        }
+        .cards__container {
+          margin-top: -370px;
+          .card {
+            display: flex;
+            flex-direction: row;
+            width: 573px;
+            height: 180px;
+            text-align: left;
+            img {
+              margin-right: 55px;
+            }
+            div {
+              width: 344px;
+            }
+          }
+        }
+      }
+    }
+    .process {
+      margin: 120px auto;
+      div {
+        display: flex;
+        article {
+          width: 223px;
+          height: 371px;
+          padding: 20px;
+          h1 {
+            @include title(72px, #fdd6ba);
+            margin: 0 0 24px 0;
+          }
+          h2 {
+            @include title(28px, #333d4b);
+          }
+          p {
+            @include cardsPara(15px, #333d4b);
+          }
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------Desktop Devices-------------------------
+@media screen and (min-width: 850px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    padding: 0 25px;
+    // padding-top: 45px;
+  }
+  main {
+    text-align: left;
+    .banner {
+      background: url("../assets/home/desktop/image-hero-coffeepress.jpg");
+      width: 100%;
+      max-width: 1440px;
+      background-size: cover;
+      h1 {
+        @include title(72px);
+        width: 600px;
+        line-height: 80px;
+        max-width: 600px;
+        margin-bottom: 32px;
+      }
+      p {
+        @include cardsPara(16px);
+      }
+      button {
+        @include button;
+      }
+    }
+    .collections {
+      align-items: center;
+      div {
+        display: flex;
+        .collection__item {
+          flex-direction: column;
+          align-items: center;
+          div {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .features {
+      width: 1280px;
+      div {
+        .inner__dark_section {
+          width: 1280px;
+          height: 477px;
+          h2 {
+            @include title(54px);
+          }
+          p {
+            @include cardsPara(18px);
+          }
+        }
+        .cards__container {
+          margin-top: -300px;
+          display: flex;
+          .card {
+            width: 350px;
+            height: 382px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            img {
+              margin: 0;
+            }
+            p {
+              width: 200px;
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+    .process {
+      width: 1280px;
+      margin: 0 auto;
+      button {
+        margin: 0 0 54px 110px;
+      }
+      div {
+        justify-content: space-evenly;
+        article {
+          width: 300px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

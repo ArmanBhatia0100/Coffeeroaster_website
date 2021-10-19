@@ -1,0 +1,633 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,200;1,600&display=swap");
+.hidden {
+  display: none;
+}
+
+header .nav {
+  width: 100%;
+}
+
+.brand_icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand_icon #hamMenue {
+  margin-top: 6px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.dropdown_container {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.dropdown_container ul {
+  list-style: none;
+  padding: 10px 30px;
+}
+
+.dropdown_container ul li {
+  margin: 10px 0px;
+  border-bottom: 1px solid #2c343e;
+}
+
+.dropdown_container ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: #2c343e;
+}
+
+.dropdown_container ul li a:hover {
+  color: #8f5c2d;
+}
+
+@media screen and (min-width: 450px) {
+  header {
+    margin: 0 auto;
+  }
+  header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .navbar #hamMenue {
+    display: none;
+  }
+  header .navbar ul {
+    display: flex;
+    text-decoration: none;
+    width: 583px;
+    justify-content: space-evenly;
+  }
+  header .navbar ul li {
+    list-style: none;
+    font-size: 16px;
+    border: none;
+  }
+  header .navbar ul li:hover {
+    color: #333d4b;
+  }
+  header .navbar ul li a {
+    text-decoration: none;
+    letter-spacing: 0.923077px;
+    text-transform: uppercase;
+    color: #83888f;
+  }
+  header .navbar ul li a:hover {
+    color: #8f5c2d;
+  }
+  header .navbar .dropdown_container {
+    display: block;
+    margin-top: 0px;
+    background-color: inherit;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  header {
+    max-width: 100%;
+  }
+}
+
+footer {
+  background: #2c343e;
+  text-align: center;
+}
+
+footer div {
+  padding: 28px 0 0 0;
+}
+
+footer div a {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 25px;
+  color: #83888f;
+  display: block;
+  text-decoration: none;
+  letter-spacing: 0.923077px;
+  text-transform: uppercase;
+}
+
+footer div a:hover {
+  color: #b1b1b1;
+}
+
+footer .social__links {
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .social__links img {
+  margin: 0 10px;
+}
+
+footer .social__links a {
+  width: 44px;
+  height: 44px;
+}
+
+footer .social__links a:hover {
+  color: #b1b1b1;
+}
+
+@media screen and (min-width: 450px) {
+  footer div {
+    width: 483px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer div a {
+    width: 220px;
+  }
+  footer div a:hover {
+    color: #b1b1b1;
+  }
+  footer .social__links {
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+  }
+  footer > div {
+    padding: 0;
+    align-items: center;
+  }
+  footer .social__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 26px;
+  }
+  footer .social__links a {
+    width: 44px;
+  }
+  footer .social__links a img {
+    padding: 10px 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fefcf7;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px 10px;
+}
+
+.wrapper {
+  padding: 0px 7px;
+  padding-top: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: "banner" "commitment" "quality" "location" "footer";
+  row-gap: 20px;
+  margin-top: 24px;
+}
+
+.banner {
+  grid-area: banner;
+  background: url("/starter-code/assets/about/mobile/image-hero-whitecup.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 25px 25px;
+  border-radius: 10px;
+  height: 400px;
+}
+
+.banner article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-around;
+}
+
+.banner article h1 {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 40px;
+  color: #fefcf7;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.banner article p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #fefcf7;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.commitment {
+  grid-area: commitment;
+}
+
+.commitment article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.commitment article img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.commitment article .commitment__text h1 {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 40px;
+  color: #333d4b;
+}
+
+.commitment article .commitment__text p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #333d4b;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  opacity: 0.8;
+}
+
+.quality {
+  margin-top: 75px;
+  grid-area: quality;
+  background: url("/starter-code/assets/about/mobile/bg-quality.png");
+  border-radius: 8px;
+}
+
+.quality img {
+  width: 279px;
+  height: 156px;
+  border-radius: 8px;
+  position: relative;
+  top: -75px;
+  left: 54px;
+}
+
+.quality .quality__text {
+  position: relative;
+  top: -50px;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.quality .quality__text h1 {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 40px;
+  color: #fefcf7;
+  margin: 0;
+}
+
+.quality .quality__text p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fefcf7;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.locations {
+  grid-area: location;
+}
+
+.locations h1 {
+  text-align: center;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 40px;
+  color: #83888f;
+}
+
+.locations .location {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.locations .location img {
+  width: 40.84px;
+  height: 49px;
+  margin: 50px auto 0 auto;
+}
+
+.locations .location h1 {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 40px;
+  color: #333d4b;
+}
+
+.locations .location p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #333d4b;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media screen and (min-width: 450px) {
+  .wrapper {
+    margin: auto;
+    row-gap: 120px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  main {
+    grid-template-rows: 400px auto auto auto auto;
+  }
+  .banner {
+    text-align: left;
+    background: url("/starter-code/assets/about/tablet/image-hero-whitecup.jpg");
+    background-size: cover;
+    padding-top: 70px;
+  }
+  .banner article {
+    align-items: flex-start;
+    width: 398px;
+  }
+  .banner article h1 {
+    text-align: left;
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 40px;
+    color: #fefcf7;
+  }
+  .banner article p {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fefcf7;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    line-height: 33px;
+  }
+  .commitment {
+    height: 570px;
+    margin: 30px 0;
+    margin-bottom: 200px;
+  }
+  .commitment article {
+    display: flex;
+    flex-direction: row;
+  }
+  .commitment article img {
+    width: 550px;
+    height: 720px;
+  }
+  .commitment article div {
+    text-align: left;
+    margin: 0 10px;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .quality img {
+    width: 573px;
+    height: 320px;
+    left: 98px;
+  }
+  .quality .quality__text {
+    align-items: center;
+    width: 540px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .locations {
+    margin-bottom: 50px;
+  }
+  .locations h1 {
+    text-align: left;
+  }
+  .locations div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .locations div .location {
+    align-items: flex-start;
+    padding: 0px;
+    justify-content: space-evenly;
+    width: 223px;
+    text-align: left;
+  }
+  .locations div .location img {
+    margin-left: 0;
+  }
+  .locations div .location h1 {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 40px;
+    color: #333d4b;
+  }
+  .locations div .location p {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #333d4b;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    width: 153px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    padding: 0 25px;
+    padding-top: 45px;
+  }
+  .banner {
+    background: url("/starter-code/assets/about/desktop/image-hero-whitecup.jpg");
+    background-size: cover;
+    height: 450px;
+    padding: 60px 0;
+  }
+  .banner article {
+    margin-left: 48px;
+    width: 445px;
+    text-align: left;
+  }
+  .banner article h1 {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    color: #fefcf7;
+  }
+  .banner article p {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: #fefcf7;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    line-height: 36px;
+    font-weight: 500;
+  }
+  .commitment {
+    height: 570px;
+    margin: 84px auto;
+    margin-bottom: 0;
+  }
+  .commitment article {
+    justify-content: space-between;
+  }
+  .commitment article img {
+    max-width: 600px;
+    max-height: 500px;
+  }
+  .commitment .commitment__text {
+    display: flex;
+    justify-content: center;
+  }
+  .commitment .commitment__text h1 {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    color: #333d4b;
+  }
+  .commitment .commitment__text p {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333d4b;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+  }
+  .quality {
+    display: flex;
+    padding: 50px 0;
+    height: 474px;
+  }
+  .quality img {
+    width: 445px;
+    max-width: 445px;
+    height: 475px;
+    position: relative;
+    top: -150px;
+    left: 54px;
+    order: 2;
+  }
+  .quality .quality__text {
+    margin: 100px 50px;
+    order: 1;
+    text-align: left;
+  }
+  .quality .quality__text h1 {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40;
+    line-height: 40px;
+    color: #fefcf7;
+    margin-bottom: 40px;
+  }
+  .quality .quality__text p {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 25px;
+    color: #fefcf7;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    line-height: 30px;
+  }
+  .locations div {
+    justify-content: space-around;
+  }
+  .locations div .location {
+    align-items: left;
+  }
+  .locations div .location h1 {
+    margin-left: 0;
+  }
+  .locations h1 {
+    margin-left: 100px;
+  }
+}
+/*# sourceMappingURL=about.css.map */
